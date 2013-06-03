@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
 
 gem 'jbuilder', '~> 1.0.1'
 gem 'pg'
@@ -12,6 +13,10 @@ group :assets do
   gem 'therubyracer'
   gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.3.0'
+end
+
+group :development do
+  gem 'heroku'
 end
 
 group :test, :development do
