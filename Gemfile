@@ -22,6 +22,7 @@ end
 group :test, :development do
   gem 'capistrano'
   gem 'pry-rails'
+  gem 'factory_girl_rails'
 end
 
 group :test do
