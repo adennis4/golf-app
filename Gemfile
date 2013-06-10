@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 ruby "2.0.0"
 
+gem 'angular-gem'
+gem 'haml-rails'
 gem 'jbuilder', '~> 1.0.1'
 gem 'jquery-rails'
+gem 'less-rails'
 gem 'pg'
 gem 'rails', '4.0.0.rc1'
 gem 'twitter-bootstrap-rails'
-gem 'less-rails'
 
 group :assets do
   gem 'coffee-rails', '~> 4.0.0'
