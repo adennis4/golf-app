@@ -2,11 +2,11 @@
 
 FactoryGirl.define do
   factory :golf_ball do
-    brand "MyString"
-    name "MyString"
-    description "MyString"
-    year "MyString"
-    price "9.99"
-    purchased 1
+    brand "Titleist"
+    name "ProV1"
+    description "This is the best."
+    year "2013"
+    price "49.99"
+    purchased 0
   end
 end

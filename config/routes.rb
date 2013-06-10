@@ -1,4 +1,9 @@
 GolfApp::Application.routes.draw do
+  scope :api do
+    scope :v1 do
+      resources :golf_balls, only: [:index, :show], controller: 'api/v1/golf_balls'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
