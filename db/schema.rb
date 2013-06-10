@@ -13,4 +13,28 @@
 
 ActiveRecord::Schema.define(version: 20130603214850) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "golf_balls", force: true do |t|
+    t.string   "brand"
+    t.string   "name"
+    t.string   "description"
+    t.string   "year"
+    t.decimal  "price"
+    t.integer  "purchased"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
