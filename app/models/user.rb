@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  has_many :golf_balls
+  belongs_to :golf_ball
 end
