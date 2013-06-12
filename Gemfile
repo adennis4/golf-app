@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.0.0"
 
-gem 'angular-gem'
 gem 'haml-rails'
 gem 'jbuilder', '~> 1.0.1'
 gem 'jquery-rails'

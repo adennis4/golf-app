@@ -1,1 +1,1 @@
-window.App = angular.module('GolfApp',['ngResource'])
+window.App = angular.module('GolfApp', ['ngResource'])
