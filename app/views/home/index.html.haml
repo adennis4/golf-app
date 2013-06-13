@@ -1,3 +1,457 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}/
+    %title Preciso
+    -# Stylesheet
+    %link{:href => "assets/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/bootstrap-responsive.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/font-awesome.min.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/style.css", :rel => "stylesheet", :type => "text/css"}/
+    %link#changeColor{:href => "assets/color/multicolor.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/flexslider.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/fancybox.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/masonry.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto+Condensed", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "img/favicon.ico", :rel => "shortcut icon"}/
+    -# Scripts
+    %script{:src => "http://code.jquery.com/jquery-1.9.1.min.js", :type => "text/javascript"}
+    %script{:src => "assets/bootstrap.min.js", :type => "text/javascript"}
+    %script{:src => "assets/jquery.nicescroll.min.js", :type => "text/javascript"}
+    %script{:src => "assets/jquery.flexslider.min.js", :type => "text/javascript"}
+    %script{:src => "assets/jquery.fancybox.min.js", :type => "text/javascript"}
+    %script{:src => "assets/jquery.masonry.min.js", :type => "text/javascript"}
+    %script{:src => "assets/functions.js", :type => "text/javascript"}
+  %body
+    -# Header
+    .header
+      .container
+        .row
+          -# Secondary Menu
+          %ul.nav.nav-pills.span6
+            %li.active
+              %a{:href => "#"} Home
+            %li
+              %a{:href => "#"} Wish List
+            %li
+              %a{:href => "#"} My Account
+            %li
+              %a{:href => "#"} Shopping Cart
+            %li
+              %a{:href => "#"} Checkout
+
+          / Header Cart
+          .cart.on
+            %i.icon-shopping-cart
+            %p
+              1.250,00
+              %span ( 3 )
+
+            / Header Cart Content
+            .cart-content
+              .mini-cart-info
+                %h3 Shopping Cart
+                %ul
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "Product", :src => ""}/
+                    .mini-cart-detail
+                      %h5
+                        %a{:href => "#"} iPhone 5 16GB Black
+                      %em 1 item
+                      %p
+                        %span € 1.230
+                      \€ 880
+                  %li
+                    %a{:href => "#"}
+                      %img{:alt => "Product", :src => ""}/
+                    .mini-cart-detail
+                      %h5
+                        %a{:href => "#"} iPhone 4s 8GB White
+                      %em 1 item
+                      %p € 120.00
+              .mini-cart-total
+                %ul
+                  %li
+                    Sub-Total
+                    %span € 101.00
+                  %li
+                    Eco Tax
+                    %span € 2.00
+                  %li
+                    VAT
+                    %span € 17.68
+                %p.total
+                  Total
+                  %span € 120.00
+              .checkout
+                %a.btn{:href => "#"} View Cart
+                %a.btn.btn-checkout{:href => "#"} Checkout
+
+          / Currency
+          %ul.nav.nav-pills.currency
+            %li.active
+              %a{:href => "#"} €
+            %li
+              %a{:href => "#"} $
+            %li
+              %a{:href => "#"} £
+
+          / Header Login
+          %p.log-reg
+            %a{:href => "#"} Sign In
+            %a{:href => "#"} Register
+          .clearfix
+
+    / Logo
+    %a#logo{:href => "#"}
+      %img{:alt => "logo", :src => ""}/
+
+    / Main Navbar
+    %hr.bordered
+    .navbar-cont
+      .container
+        .row
+          .span12
+            .navbar
+              .navbar-inner
+                .container
+                  %a.btn.btn-navbar{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse"}
+                    %i.icon-align-justify
+                  .nav-collapse.collapse.navbar-responsive-collapse
+                    %ul.nav
+                      %li
+                        %a{:href => ""} Home
+                      %li.dropdown.active
+                        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "about.html"}>
+                          Pages
+                          %i.icon-angle-down
+
+                      / Dropdown Navbar
+                      %ul.dropdown-menu
+                        %li
+                          %a{:href => ""} About
+                        %li
+                          %a{:href => ""} Services
+                        %li
+                          %a{:href => ""} Full Width
+                        %li.active
+                          %a{:href => ""} Left Sidebar
+                        %li
+                          %a{:href => ""} Right Sidebar
+                        %li
+                          %a{:href => ""} Page 404
+                        %li
+                          %a{:href => ""} Contact
+                      %li.dropdown
+                        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}>
+                          Portfolio
+                          %i.icon-angle-down
+
+                      / Dropdown Navbar
+                      %ul.dropdown-menu
+                        %li
+                          %a{:href => ""} Portfolio Columns
+                        %li
+                          %a{:href => ""} Portfolio Masonry
+                        %li
+                          %a{:href => ""} Portfolio Single
+                      %li.dropdown
+                        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}>
+                          Blog
+                          %i.icon-angle-down
+
+                      / Dropdown Navbar
+                      %ul.dropdown-menu
+                        %li
+                          %a{:href => ""} Blog Home
+                        %li
+                          %a{:href => ""} Blog Post
+                      %li.dropdown
+                        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}>
+                          Shop
+                          %i.icon-angle-down
+
+                      / Dropdown Navbar
+                      %ul.dropdown-menu
+                        %li
+                          %a{:href => ""} Shop Home
+                        %li
+                          %a{:href => ""} Shop Category List
+                        %li
+                          %a{:href => ""} Shop Product Detail
+                        %li
+                          %a{:href => ""} Shop Cart
+                        %li
+                          %a{:href => ""} Contact
+
+                    / Navbar Search
+                    %form.header-search{:action => "header-search"}
+                      %fieldset
+                        %input{:placeholder => "Search", :type => "text"}/
+                        %button
+                          %i.icon-search
+
+    %hr.bordered
+
+    .container
+      .row
+
+        / Sidebar
+        .span3.sidebar
+          %h3 Categories
+          %ul.nav.nav-stacked
+            %li.active
+              %a{:href => "#"} Design
+            %li
+              %a{:href => "#"} Wordpress
+            %li
+              %a{:href => "#"} Template
+            %li
+              %a{:href => "#"} Business
+            %li
+              %a{:href => "#"} Mobile
+          %h3 Archives
+          %form{:action => "archives"}
+            %select.span3
+              %option April 2013
+              %option March 2013
+              %option February 2013
+              %option January 2013
+              %option December 2012
+          %h3 Widget Text
+          %p
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            %strong nonummy
+            nibh euismod tincidunt ut laoreet
+            %a{:href => "#"} dolore
+            magna aliquam erat volutpat.
+
+        / Content
+        .span9
+
+          / Breadcrumb
+          %ul.breadcrumb
+            %li
+              %a{:href => "#"} Home
+              %span.divider /
+            %li
+              %a{:href => "#"} Pages
+              %span.divider /
+            %li.active Left Sidebar
+          %h1
+            Left
+            %span Sidebar
+          %em.date
+            by
+            %a{:href => "#"} Admin
+            on May 28th, 2013
+
+          %p.small-desc
+            Lorem ipsum dolor sit amet, consectetuer
+            %strong adipiscing
+            elit.
+            %br/
+            Sed diam nonummy nibh euismod tincidunt ut
+            %a{:href => "#"} laoreet dolore
+            magna aliquam erat volutpat.
+            %br/
+            %br/
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            %br/
+            %br/
+            Duis autem
+            %strong vel eum iriure
+            dolor in hendrerit, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          %p.small-desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          .row
+            %img.span3.margin-bottom{:alt => "Picture", :src => ""}/
+            %img.span3.margin-bottom{:alt => "Picture", :src => ""}/
+            %img.span3.margin-bottom{:alt => "Picture", :src => ""}/
+          %p.small-desc
+            Lorem ipsum dolor sit amet, consectetuer
+            %strong adipiscing
+            elit.
+            %br/
+            Sed diam nonummy nibh euismod tincidunt ut
+            %a{:href => "#"} laoreet dolore
+            magna aliquam erat volutpat.
+            %br/
+            %br/
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            %br/
+            %br/
+            Duis autem
+            %strong vel eum iriure
+            dolor in hendrerit, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          %ul.list-desc
+            %li
+              %i.icon-bullhorn>
+              Nonummy nibh
+            %li
+              %i.icon-laptop>
+              Tincidunt ut
+            %li
+              %i.icon-globe>
+              Aliquam erat
+
+    / Small Banners
+    .container
+      .row
+        .span6
+          .banner-small
+            %a{:href => "#"}
+              %img{:alt => "Banner", :src => ""}/
+        .span6
+          .banner-small
+            %a{:href => "#"}
+              %img{:alt => "Banner", :src => ""}/
+    / Brands List
+    .container
+      .brands
+        %ul.thumbnails
+          %li.span2
+            %a{:href => "#"}
+              %img.thumbnail{:alt => "Logo", :src => ""}/
+          %li.span2
+            %a{:href => "#"}
+              %img.thumbnail{:alt => "Logo", :src => ""}/
+          %li.span2
+            %a{:href => "#"}
+              %img.thumbnail{:alt => "Logo", :src => ""}/
+          %li.span2
+            %a{:href => "#"}
+              %img.thumbnail{:alt => "Logo", :src => ""}/
+          %li.span2
+            %a{:href => "#"}
+              %img.thumbnail{:alt => "Logo", :src => ""}/
+          %li.span2
+            %a{:href => "#"}
+              %img.thumbnail{:alt => "Logo", :src => ""}/
+    / Footer
+    .footer
+      .container
+        .row
+          / Footer Info
+          .span3
+            %h5
+              %i.icon-globe>
+              Negozio Preciso
+              %img{:alt => "Store", :src => ""}/
+          .span3
+            %h5
+              %i.icon-globe>
+              About
+            %p
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              %strong nonummy nibh
+              euismod tincidunt ut laoreet. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              %a{:href => "#"} ullamcorper suscipit
+              lobortis.
+          / Footer Contact
+          .span3
+            %h5
+              %i.icon-asterisk>
+              Contact Us
+            %ul.footer-contact
+              %li
+                %i.icon-map-marker>
+                123 Yellow Av, New York
+              %li
+                %i.icon-phone>
+                123123123
+              %li
+                %i.icon-mobile-phone>
+                123123123
+              %li
+                %i.icon-envelope-alt
+                %a{:href => "#"} your@email.com
+
+          / Footer Social
+          .span3
+            %h5
+              %i.icon-rss>
+              Keep in touch
+            .footer-social
+              %a.icon-facebook{:href => "#"}
+              %a.icon-twitter{:href => "#"}
+              %a.icon-google-plus{:href => "#"}
+              %a.icon-pinterest{:href => "#"}
+              %a.icon-linkedin{:href => "#"}
+    / Footer Links
+    .footer-links
+      .container
+        .row
+          .span3
+            %h5
+              %i.icon-info>
+              Information
+            %ul
+              %li
+                %a{:href => "#"} About Us
+              %li
+                %a{:href => "#"} Delivery Information
+              %li
+                %a{:href => "#"} Privacy Policy
+              %li
+                %a{:href => "#"} Terms & Conditions
+          .span3
+            %h5
+              %i.icon-comment>
+              Customer Service
+            %ul
+              %li
+                %a{:href => "#"} Contact Us
+              %li
+                %a{:href => "#"} Returns
+              %li
+                %a{:href => "#"} Delivery
+              %li
+                %a{:href => "#"} Site Map
+          .span3
+            %h5
+              %i.icon-folder-open>
+              Extras
+            %ul
+              %li
+                %a{:href => "#"} Brands
+              %li
+                %a{:href => "#"} Gift Vouchers
+              %li
+                %a{:href => "#"} Affiliates
+              %li
+                %a{:href => "#"} Specials
+          .span3
+            %h5
+              %i.icon-unlock-alt>
+              My Account
+            %ul
+              %li
+                %a{:href => "#"} My Account
+              %li
+                %a{:href => "#"} Order History
+              %li
+                %a{:href => "#"} Wish List
+              %li
+                %a{:href => "#"} Newsletter
+    %hr.bordered
+
+    / Copy
+    .copy
+      .container
+        .row
+          .span12
+
+            / Cards
+            %img{:alt => "Cards", :src => "img/cards.png"}/
+            %p.text-center
+              Powered by
+              %strong OpenCart
+              \- © 2013
+              %a{:href => "#"} Your Store
+
+
 %div
   %label Name
   %input{ :type => "text", "ng-model" => "yourName", :placeholder => "Enter a name here"}
