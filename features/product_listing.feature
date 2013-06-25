@@ -1,3 +1,4 @@
+@javascript
 Feature: Product Listing
 
   Scenario: User views product listing

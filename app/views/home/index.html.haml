@@ -98,23 +98,18 @@
 
     %hr.bordered
 
-    .container
+    .container{ "ng-controller" => 'GolfBallsCtrl' }
       .row
 
         / Sidebar
         .span3.sidebar
           %h3 Brands
           %ul.nav.nav-stacked
-            %li.active
-              %a{:href => "#"} Titleist
-            %li
-              %a{:href => "#"} TaylorMade
-            %li
-              %a{:href => "#"} Nike
-            %li
-              %a{:href => "#"} Callaway
-            %li
-              %a{:href => "#"} Bridgestone
+            %li.active{ "ng-repeat" => 'golf_ball in golf_balls',
+            "ng-click" => "showGolfBall(golf_ball, $index)" }
+
+              %a{ :href => "#", "ng-class" => "{ active: $index == selectedRow }" } {{ golf_ball.brand }}
+
           %h3 Widget Text
           %p
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -124,7 +119,7 @@
             magna aliquam erat volutpat.
 
         / Content
-        .span9
+        .span9.sidebar{ "ng-show" => 'selectedGolfBall' }
 
           / Breadcrumb
           %ul.breadcrumb
@@ -134,7 +129,7 @@
             %li
               %a{:href => "#"} Golf Balls
               %span.divider /
-            %li.active Titleist
+            %li.active {{ selectedGolfBall.brand }}
           %h1
             Golf
             %span Balls
@@ -142,22 +137,13 @@
 
           %img.span3.margin-bottom{:alt => "Picture", :src => "assets/titleist_500x488.png"}/
           %h3.span3.product-info
-            Titleist ProV1
-            .price-small $62.00
-            .price-big $41.99
+            {{ selectedGolfBall.brand }} {{ selectedGolfBall.name }}
+            .price-small Retail Price: ${{ selectedGolfBall.original_price }}
+            .price-big Our Price: ${{ selectedGolfBall.price }}
             .btn.btn-primary.btn-custom Buy!
 
-          %p.small-desc
-            Lorem ipsum dolor sit amet, consectetuer
-            %strong adipiscing
-            elit.
-            %br/
-            Sed diam nonummy nibh euismod tincidunt ut
-            %a{:href => "#"} laoreet dolore
-            magna aliquam erat volutpat.
-            %br/
-            %br/
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          %p.small-desc.side
+            {{ selectedGolfBall.description }}
             %br/
             %br/
           %p.span9.small-desc Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
@@ -303,5 +289,4 @@
   %input{ :type => "text", "ng-model" => "yourName", :placeholder => "Enter a name here"}
     %h1 Hello {{yourName}}!
 
-%div{ "ng-controller" => 'GolfBallsCtrl' }
   %h1 Message: {{message}}

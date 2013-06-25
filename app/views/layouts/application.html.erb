@@ -4,7 +4,6 @@
   <title>GolfApp</title>
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= csrf_meta_tags %>
-  <%= javascript_include_tag "application" %>
   <link href="assets/favicon.ico" rel="icon">
 </head>
 <body>
@@ -13,6 +12,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
+<%= javascript_include_tag "application" %>
 
 </body>
 </html>

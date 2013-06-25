@@ -15,7 +15,8 @@ describe 'api/golf_balls.json', type: :api do
     it 'returns all golf balls' do
       JSON.parse(response.body).count.should eq 2
     end
-it 'returns all golf ball information' do
+
+    it 'returns all golf ball information' do
       golf_ball = JSON.parse(response.body).first
       expect(golf_ball["brand"]).to eq @ball.brand
       expect(golf_ball["name"]).to eq @ball.name
