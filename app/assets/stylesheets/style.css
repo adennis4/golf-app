@@ -1029,7 +1029,7 @@ address a:hover {
 /* Product List */
 .products-list {
 	padding-top: 40px;
-	background: #F9F9F9 url(../img/bg-line-vert.png);
+	background: #F9F9F9
 	box-shadow: 0 -10px 0 rgba(0,0,0,0.1);
 	position: relative;
 }
@@ -1972,7 +1972,7 @@ address a:hover {
 }
 .footer-links {
 	padding-top: 40px;
-	background: #F9F9F9 url(../img/bg-line-vert.png) repeat;
+	background: #F9F9F9
 }
 .footer-links h5 {
 	margin-bottom: 10px;
@@ -2022,7 +2022,7 @@ address a:hover {
 /* Copy */
 .copy {
 	padding: 40px 0;
-	background: #F9F9F9 url(../img/bg-line-vert.png) repeat;
+	background: #F9F9F9
 }
 .copy img {
 	margin: 0 auto 20px;
