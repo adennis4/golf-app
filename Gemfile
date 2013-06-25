@@ -24,10 +24,12 @@ group :test, :development do
   gem 'capistrano'
   gem 'pry-rails'
   gem 'factory_girl_rails'
+  gem 'selenium-webdriver'
 end
 
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'poltergeist'
   gem 'rspec-rails'
 end
