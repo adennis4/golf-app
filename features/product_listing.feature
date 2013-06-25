@@ -8,6 +8,7 @@ Feature: Product Listing
     And I see the featured brand
     And I see the featured brand suggested retail price
     And I see the featured brand actual price
-    And I see the featured brand description
-    And I see the featured brand reviews
+    And I see the featured brand shorter description
+    And I see the featured brand longer description
     And I see a buy button
+    And I see the featured brand reviews

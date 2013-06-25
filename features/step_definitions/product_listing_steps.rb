@@ -38,8 +38,24 @@ Then 'I see the featured brand actual price' do
   end
 end
 
-Then 'I see the featured brand description' do
+Then 'I see the featured brand shorter description' do
   within '.small-desc.side' do
-    page.should have_content "$#{@titleist.description}"
+    page.should have_content "#{@titleist.mini_description}"
   end
+end
+
+Then 'I see the featured brand longer description' do
+  within '.span9.small-desc' do
+    page.should have_content "#{@titleist.description}"
+  end
+end
+
+Then 'I see a buy button' do
+  within '.btn.btn-primary.btn-custom' do
+    page.should have_content "Buy!"
+  end
+end
+
+Then 'I see the featured brand reviews' do
+  page.should have_content "THESE ARE THE REVIEWS"
 end
