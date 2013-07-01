@@ -57,5 +57,7 @@ Then 'I see a buy button' do
 end
 
 Then 'I see the featured brand reviews' do
-  page.should have_content "THESE ARE THE REVIEWS"
+  within '.footer .reviews' do
+    page.should have_content "REVIEWS"
+  end
 end

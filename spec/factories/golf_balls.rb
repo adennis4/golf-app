@@ -10,5 +10,6 @@ FactoryGirl.define do
     original_price "59.99"
     price "49.99"
     purchased 0
+    image_path ""
   end
 end
