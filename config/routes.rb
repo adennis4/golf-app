@@ -2,6 +2,7 @@ GolfApp::Application.routes.draw do
   scope :api do
     scope :v1 do
       resources :golf_balls, only: [:index, :show], controller: 'api/v1/golf_balls'
+      resources :reviews, only: [:index], controller: 'api/v1/reviews'
     end
   end
 
