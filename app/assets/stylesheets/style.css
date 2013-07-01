@@ -4,6 +4,10 @@
 /* Negozio Preciso CSS v1.0 - Designed and built by Angelo Mazzilli */
 /* http://themeforest.net/user/AngeloM */
 
+#featured {
+  margin-top: 0px;
+}
+
 .price-small{
   margin-top: 15px;
   font-size: 12px;

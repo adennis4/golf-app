@@ -119,7 +119,7 @@
             magna aliquam erat volutpat.
 
         / Content
-        .span9.sidebar{ "ng-show" => 'selectedGolfBall' }
+        .span9.sidebar#featured{ "ng-show" => 'selectedGolfBall' }
 
           / Breadcrumb
           %ul.breadcrumb
@@ -153,23 +153,18 @@
       .brands
         %ul.thumbnails
           %li.span2
-            %a{:href => "#"}
-              %img.thumbnail{:alt => "Logo", :src => "assets/titleist_500x488.png"}/
+            %img.thumbnail{:alt => "Logo", :src => "assets/titleist_500x488.png"}
           %li.span2
-            %a{:href => "#"}
-              %img.thumbnail{:alt => "Logo", :src => "assets/taylormade_550x550.jpeg"}/
+            %img.thumbnail{:alt => "Logo", :src => "assets/taylormade_550x550.jpeg"}
           %li.span2
-            %a{:href => "#"}
-              %img.thumbnail{:alt => "Logo", :src => "assets/nike_550x500.jpeg"}/
+            %img.thumbnail{:alt => "Logo", :src => "assets/nike_550x500.jpeg"}
           %li.span2
-            %a{:href => "#"}
-              %img.thumbnail{:alt => "Logo", :src => "assets/nike_550x550.jpeg"}/
+            %img.thumbnail{:alt => "Logo", :src => "assets/nike_550x550.jpeg"}
           %li.span2
-            %a{:href => "#"}
-              %img.thumbnail{:alt => "Logo", :src => "assets/callaway_405x395.jpg"}/
+            %img.thumbnail{:alt => "Logo", :src => "assets/callaway_405x395.jpg"}
           %li.span2
-            %a{:href => "#"}
-              %img.thumbnail{:alt => "Logo", :src => "assets/bridgestone_350x400.jpg"}/
+            %img.thumbnail{:alt => "Logo", :src => "assets/bridgestone_350x400.jpg"}
+
     / Footer
     .footer
       .container
@@ -282,11 +277,3 @@
               %strong OpenCart
               \- © 2013
               %a{:href => "#"} Your Store
-
-
-%div
-  %label Name
-  %input{ :type => "text", "ng-model" => "yourName", :placeholder => "Enter a name here"}
-    %h1 Hello {{yourName}}!
-
-  %h1 Message: {{message}}
