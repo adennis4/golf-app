@@ -135,7 +135,7 @@
             %span Balls
           %em.date
 
-            %img.span3.margin-bottom{:alt => "Picture", :src => "{{ selectedGolfBall.image_path }}" }/
+            %img.span3.margin-bottom{:alt => "Picture", "ng-src" => "{{ selectedGolfBall.image_path }}" }
           %h3.span3.product-info
             {{ selectedGolfBall.brand }} {{ selectedGolfBall.name }}
             .price-small Retail Price: ${{ selectedGolfBall.original_price }}
@@ -169,27 +169,11 @@
     .footer
       .container
         .row
-          / Footer Info
-          .span3
-            %h5
-              %i.icon-globe>
-              Negozio Preciso
-              %img{:alt => "Store", :src => ""}/
-          .span3
-            %h5
-              %i.icon-globe>
-              About
-            %p
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              %strong nonummy nibh
-              euismod tincidunt ut laoreet. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-              %a{:href => "#"} ullamcorper suscipit
-              lobortis.
-          / Footer Contact
-          .span3
+          / Footer Reviews
+          .span3.reviews
             %h5
               %i.icon-asterisk>
-              Contact Us
+              Reviews
             %ul.footer-contact
               %li
                 %i.icon-envelope-alt
