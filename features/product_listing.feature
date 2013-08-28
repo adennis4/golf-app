@@ -12,3 +12,10 @@ Feature: Product Listing
     And I see the featured brand longer description
     And I see a buy button
     And I see the featured brand reviews
+
+  Scenario: User views product reviews
+    Given I am a non-signed in user
+    When I land on the home page
+    Then I see a list of reviews for "titleist"
+    And I click "Nike"
+    Then I see a list of reviews for "Nike"

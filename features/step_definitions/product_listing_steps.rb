@@ -1,8 +1,10 @@
 Given 'I am a non-signed in user' do
   FactoryGirl.build(:user)
   @titleist = FactoryGirl.create(:golf_ball)
-  @taylormade = FactoryGirl.create(:golf_ball, brand: "TaylorMade")
   @nike = FactoryGirl.create(:golf_ball, brand: "Nike")
+  FactoryGirl.create(:golf_ball, brand: "TaylorMade")
+  FactoryGirl.create(:review)
+  FactoryGirl.create(:review, title: "These balls are terrible.", golf_ball_id: 2)
 end
 
 When 'I land on the home page' do
@@ -12,7 +14,7 @@ end
 Then 'I see a list of golf ball brands' do
   within '.nav.nav-stacked' do
     page.all('li').count.should == 3
-    page.should have_content "Titleist TaylorMade Nike"
+    page.should have_content "TaylorMade"
   end
 end
 
@@ -59,5 +61,18 @@ end
 Then 'I see the featured brand reviews' do
   within '.footer .reviews' do
     page.should have_content "REVIEWS"
+  end
+end
+
+Then /^I see a list of reviews for "(.*)"$/ do |brand|
+  golf_ball = brand == "titleist" ? @titleist : @nike
+  within '.footer .reviews' do
+    page.should have_content golf_ball.reviews.first.title
+  end
+end
+
+When 'I click "Nike"' do
+  within '.span3.sidebar' do
+    page.all('a')[2].click
   end
 end
