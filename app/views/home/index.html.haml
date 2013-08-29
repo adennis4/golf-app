@@ -106,7 +106,7 @@
           %h3 Brands
           %ul.nav.nav-stacked
             %li.active{ "ng-repeat" => 'golf_ball in golf_balls',
-            "ng-click" => "showGolfBall(golf_ball, $index)" }
+            "ng-click" => "handleClick(golf_ball, $index)" }
 
               %a{ :href => "#", "ng-class" => "{ active: $index == selectedRow }" } {{ golf_ball.brand }}
 
@@ -170,12 +170,18 @@
       .container
         .row
           / Footer Reviews
-          .span3.reviews
+          .span3.reviews{ 'ng-controller' => 'ReviewsCtrl' }
             %h5
               %i.icon-asterisk>
               Reviews
             %ul.footer-contact
-              %li
+              %li.active{ 'ng-show' => 'selectedReviews' }
+                %dl{ 'ng-repeat' => 'review in selectedReviews | filter:{brand : brand}'}
+                  %dt {{ review.title }}
+                  %dd {{ review.body }}
+                  %dt Rating
+                  %dd {{ review.rating }}
+
                 %i.icon-envelope-alt
                 %a{:href => "#"} your@email.com
 

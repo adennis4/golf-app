@@ -73,6 +73,6 @@ end
 
 When 'I click "Nike"' do
   within '.span3.sidebar' do
-    page.all('a')[2].click
+    page.all('a')[1].click
   end
 end
