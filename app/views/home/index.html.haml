@@ -88,8 +88,8 @@
 
                       %li.dropdown
                         %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}>
-                          Shop
                           %i.icon-angle-down
+                          Shop
 
                         / Dropdown Navbar
                         %ul.dropdown-menu
@@ -110,13 +110,13 @@
 
               %a{ :href => "#", "ng-class" => "{ active: $index == selectedRow }" } {{ golf_ball.brand }}
 
-          %h3 Widget Text
+          %h3 Our Promise
           %p
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            %strong nonummy
-            nibh euismod tincidunt ut laoreet
-            %a{:href => "#"} dolore
-            magna aliquam erat volutpat.
+            %strong NoRushGolf
+            works with wholesalers of the highest quality golf balls
+            on the market. Our relationships provide you the option to buy great
+            golf balls for a reasonable price. We guarantee quality and satisfaction.
+            If you need anything email us or find us on twitter.
 
         / Content
         .span9.sidebar#featured{ "ng-show" => 'selectedGolfBall' }
@@ -140,7 +140,8 @@
             {{ selectedGolfBall.brand }} {{ selectedGolfBall.name }}
             .price-small Retail Price: ${{ selectedGolfBall.original_price }}
             .price-big Our Price: ${{ selectedGolfBall.price }}
-            .btn.btn-primary.btn-custom Buy!
+            %a.btn.btn-primary.btn-custom{:href => cart_path }
+              Buy!
 
           %p.small-desc.side
             {{ selectedGolfBall.mini_description }}
@@ -170,7 +171,7 @@
       .container
         .row
           / Footer Reviews
-          .span3.reviews{ 'ng-controller' => 'ReviewsCtrl' }
+          .span10.reviews{ 'ng-controller' => 'ReviewsCtrl' }
             %h5
               %i.icon-asterisk>
               Reviews
@@ -182,20 +183,13 @@
                   %dt Rating
                   %dd {{ review.rating }}
 
-                %i.icon-envelope-alt
-                %a{:href => "#"} your@email.com
-
           / Footer Social
-          .span3
-            %h5
-              %i.icon-rss>
-              Keep in touch
-            .footer-social
-              %a.icon-facebook{:href => "#"}
-              %a.icon-twitter{:href => "#"}
-              %a.icon-google-plus{:href => "#"}
-              %a.icon-pinterest{:href => "#"}
-              %a.icon-linkedin{:href => "#"}
+          %h5
+            %i.icon-rss>
+            Keep in touch
+          .footer-social
+            %a.icon-twitter{:href => "#"}
+
     / Footer Links
     .footer-links
       .container
