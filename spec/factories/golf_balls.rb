@@ -11,5 +11,11 @@ FactoryGirl.define do
     price "49.99"
     purchased 0
     image_path ""
+
+    factory :golf_ball_with_review do
+      after(:create) do |golf_ball|
+        FactoryGirl.create(:review, golf_ball: golf_ball)
+      end
+    end
   end
 end

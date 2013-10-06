@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :review do
-    title "Great balls"
     body "Hit em straight."
+    title "This is the title of the review."
     rating 5
-    golf_ball_id 1
     user_id 1
+    golf_ball
   end
 end

@@ -7,9 +7,9 @@ class Review < ActiveRecord::Base
   def as_json(opts={})
     {
       brand: golf_ball.brand,
-      title: self.title,
-      body: self.body,
-      rating: self.rating
+      title: title,
+      body: body,
+      rating: rating
     }
   end
 end

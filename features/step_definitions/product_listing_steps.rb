@@ -1,10 +1,8 @@
 Given 'I am a non-signed in user' do
   FactoryGirl.build(:user)
-  @titleist = FactoryGirl.create(:golf_ball)
-  @nike = FactoryGirl.create(:golf_ball, brand: "Nike")
-  FactoryGirl.create(:golf_ball, brand: "TaylorMade")
-  FactoryGirl.create(:review)
-  FactoryGirl.create(:review, title: "These balls are terrible.", golf_ball_id: 2)
+  @titleist = FactoryGirl.create(:golf_ball_with_review, brand: 'Titleist')
+  @nike = FactoryGirl.create(:golf_ball_with_review, brand: 'Nike')
+  FactoryGirl.create(:golf_ball_with_review, brand: 'TaylorMade')
 end
 
 When 'I land on the home page' do
