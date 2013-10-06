@@ -16,6 +16,6 @@ Feature: Product Listing
   Scenario: User views product reviews
     Given I am a non-signed in user
     When I land on the home page
-    Then I see a list of reviews for "titleist"
+    Then I see a list of reviews for "Titleist"
     When I click "Nike"
     Then I see a list of reviews for "Nike"

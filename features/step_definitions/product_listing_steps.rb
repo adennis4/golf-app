@@ -63,14 +63,12 @@ Then 'I see the featured brand reviews' do
 end
 
 Then /^I see a list of reviews for "(.*)"$/ do |brand|
-  golf_ball = brand == "titleist" ? @titleist : @nike
+  golf_ball = brand == "Titleist" ? @titleist : @nike
   within '.footer .reviews' do
     page.should have_content golf_ball.reviews.first.title
   end
 end
 
-When 'I click "Nike"' do
-  within '.span3.sidebar' do
-    page.all('a')[1].click
-  end
+When /^I click "(.*)"$/ do |label|
+  click_on label
 end
