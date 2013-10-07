@@ -74,17 +74,15 @@
                     %i.icon-align-justify
                   .nav-collapse.collapse.navbar-responsive-collapse
                     %ul.nav
-                      %li
+                      %li.active
                         %a{:href => "/"} Home
-                      %li.dropdown.active
+                      %li.dropdown
                         %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "about.html"}>
                           About
-                          %i.icon-angle-down
 
                       %li.dropdown
                         %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}>
                           Blog
-                          %i.icon-angle-down
 
                       %li.dropdown
                         %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}>
@@ -96,6 +94,9 @@
                           %li
                             %a{:href => "/"} Golf Balls
 
+                      %li.dropdown
+                        %a.dropdown-toggle{"data-toggle" => "dropdown", :href => cart_path}
+                          Cart
     %hr.bordered
 
     .container{ "ng-controller" => 'GolfBallsCtrl' }
@@ -247,20 +248,6 @@
               %li
                 %a{:href => "#"} Newsletter
     %hr.bordered
-
-    / Copy
-    .copy
-      .container
-        .row
-          .span12
-
-            / Cards
-            %img{:alt => "Cards", :src => ""}/
-            %p.text-center
-              Powered by
-              %strong OpenCart
-              \- © 2013
-              %a{:href => "#"} Your Store
 
     #toTop
       %i.icon-chevron-up.icon-white
